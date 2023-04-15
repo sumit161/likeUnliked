@@ -1,0 +1,22 @@
+<h1 class="bg-info text-center p-4">Reusable Component</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4" *ngFor="let item of reels; index as i">
+      <div class="card">
+        <div class="card-header">
+          {{ item.title }}
+        </div>
+        <div class="card-body">
+          <img src="{{ item.img}}" class="img-fluid" alt="" />
+        </div>
+        <div>
+          <app-like
+          [isliked]="item.islike"
+          (customEvent)="Callbackfunction($event, item.id)"
+        ></app-like>
+          <span>{{ item.likeCount }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+i{
+  color: #000;
+  cursor: pointer;
+  &.liked{
+    color: red;
+  }
+}
+.card{
+  height: 300px;
+  overflow: hidden;
+ }
+ .card-body img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+ }
